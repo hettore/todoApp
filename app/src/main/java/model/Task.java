@@ -16,19 +16,19 @@ public class Task {
     private int idProject;
     private String name;
     private String description;
-    private String notes;
     private boolean isCompleted;
+    private String notes;   
     private Date deadline;
     private Date createdAt;
     private Date updatedAt;
 
-    public Task(int id, int idProject, String name, String description, String notes, boolean isCompleted, Date deadline, Date createdAt, Date updatedAt) {
+    public Task(int id, int idProject, String name, String description, boolean isCompleted, String notes, Date deadline, Date createdAt, Date updatedAt) {
         this.id = id;
         this.idProject = idProject;
         this.name = name;
         this.description = description;
-        this.notes = notes;
         this.isCompleted = isCompleted;
+        this.notes = notes;
         this.deadline = deadline;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
