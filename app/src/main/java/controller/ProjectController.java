@@ -22,11 +22,12 @@ public class ProjectController {
     
     public void save(Project project) {
         
-        String sql = "INSERT INTO projects (name,"
-                + "description,"
-                + "createdAt,"
-                + "updatedAt"
-                + "VALUES (?,?,?,?";
+        String sql = "INSERT INTO projects ("
+                + "name, "
+                + "description, "
+                + "createdAt, "
+                + "updatedAt "
+                + ") VALUES (?,?,?,?)";
         
         Connection connection = null;
         PreparedStatement statement = null;
@@ -55,12 +56,12 @@ public class ProjectController {
     
     public void update(Project project) {
         
-        String sql = "UPDATE projects SET "
+        String sql = "UPDATE projects SET " 
                 + "name = ?, "
                 + "description = ?, "
                 + "createdAt = ?, "
-                + "updatedAt = ?, "
-                + "WHERE id = ?";
+                + "updatedAt = ? WHERE id = ? ";
+                
         
         Connection connection = null;
         PreparedStatement statement = null;

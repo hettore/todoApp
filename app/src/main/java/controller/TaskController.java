@@ -30,8 +30,7 @@ public class TaskController {
                 + "notes,"
                 + "deadline,"
                 + "createdAt,"
-                + "updatedAt,"
-                + ") VALUES (?,?,?,?,?,?,?,?)";
+                + "updatedAt) VALUES (?,?,?,?,?,?,?,?)";
         
         Connection connection = null;
         PreparedStatement statement = null;
@@ -65,8 +64,7 @@ public class TaskController {
                 + "notes = ?, "
                 + "deadline = ?, "
                 + "createdAt = ?, "
-                + "updatedAt = ? "
-                + "WHERE id = ?";
+                + "updatedAt = ? WHERE id = ?";
         
         Connection connection = null;
         PreparedStatement statement = null;
@@ -92,7 +90,7 @@ public class TaskController {
             //Executando a query
             statement.execute();
         } catch (Exception ex) {
-            throw new RuntimeException("Erro ao atualizar a tarefa" + ex.getMessage(), ex);
+            throw new RuntimeException("Erro ao atualizar a tarefa " + ex.getMessage(), ex);
         } finally {
             ConnectionFactory.closeConnection(connection, statement);
         }
