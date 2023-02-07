@@ -50,16 +50,16 @@ public class App {
       Task task = new Task();
       task.setIdProject(2);
       task.setId(4);
-      task.setName("MUDAR as telas da aplicação");
+//      task.setName("MUDAR as telas da aplicação");
 //      task.setDescription("cadastros");
 //      task.setNotes("Sem notas");
 //      task.setIsCompleted(false);
 //      task.setDeadline(new Date());
         
-        taskController.update(task);
+        taskController.removeById(4);
         
-//        List<Task> tasks = taskController.getAll(2);
-//        System.out.println("Total de tarefas " + tasks.size());
+        List<Task> tasks = taskController.getAll(2);
+        System.out.println("Total de tarefas " + tasks.size());
         
         
 
