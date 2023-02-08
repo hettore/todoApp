@@ -43,23 +43,23 @@ public class App {
 //        List<Project> projects = projectController.getAll();
 //        System.out.println("Total de projetos = " + projects.size());
 //        
-//        projectController.removeById(1);
+//        projectController.removeById(2);
         
-          TaskController taskController = new TaskController();
+//        TaskController taskController = new TaskController();
 //        
-      Task task = new Task();
-      task.setIdProject(2);
-      task.setId(4);
-//      task.setName("MUDAR as telas da aplicação");
-//      task.setDescription("cadastros");
-//      task.setNotes("Sem notas");
-//      task.setIsCompleted(false);
-//      task.setDeadline(new Date());
+//        Task task = new Task();
+//        task.setIdProject(2);
+//        task.setId(4);
+//        task.setName("MUDAR as telas da aplicação");
+//        task.setDescription("cadastros");
+//        task.setNotes("Sem notas");
+//        task.setIsCompleted(false);
+//        task.setDeadline(new Date());
         
-        taskController.removeById(4);
-        
-        List<Task> tasks = taskController.getAll(2);
-        System.out.println("Total de tarefas " + tasks.size());
+//        taskController.removeById(1);
+//        
+//        List<Task> tasks = taskController.getAll(2);
+//        System.out.println("Total de tarefas " + tasks.size());
         
         
 
