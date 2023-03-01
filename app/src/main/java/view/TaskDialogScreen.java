@@ -5,6 +5,10 @@
 package view;
 
 import controller.TaskController;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
+import model.Project;
 import model.Task;
 
 /**
@@ -14,6 +18,8 @@ import model.Task;
 public class TaskDialogScreen extends javax.swing.JDialog {
 
     TaskController controller;
+    Project project;
+    
     /**
      * Creates new form ProjectDialogScreen
      */
@@ -175,13 +181,24 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         
         try {
             Task task = new Task();
+            
+            task.setIdProject(3);
+            
             task.setName(jTextFieldName.getText());
             task.setDescription(jTextAreaDescription.getText());
             task.setNotes(jTextAreaNotes.getText());
+            task.setIsCompleted(false);
             
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/y");
+            Date deadline = null;
+            deadline = dateFormat.parse(jFormattedTextFieldDeadline.getText());
+            task.setDeadline(deadline);
             
+            controller.save(task);
             
+            JOptionPane.showConfirmDialog(rootPane, "Tarefa salva com sucesso!");
         } catch (Exception e) {
+            JOptionPane.showConfirmDialog(rootPane, e.getMessage());
         }
         this.dispose();
     }//GEN-LAST:event_jLabelToolBarSaveMouseClicked
@@ -245,4 +262,10 @@ public class TaskDialogScreen extends javax.swing.JDialog {
     private javax.swing.JTextArea jTextAreaNotes;
     private javax.swing.JTextField jTextFieldName;
     // End of variables declaration//GEN-END:variables
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    
 }
