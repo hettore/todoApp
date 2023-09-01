@@ -145,7 +145,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         // TODO add your handling code here:
         
         try {
-            if(!jTextFieldName.getText().isEmpty() && !jTextFieldName.getText().equals(" ")){
+            if(!jTextFieldName.getText().isEmpty() && !jTextFieldName.getText().isBlank()){
                 Project project = new Project();
                 project.setName(jTextFieldName.getText());
                 project.setDescription(jTextAreaDescription.getText());
