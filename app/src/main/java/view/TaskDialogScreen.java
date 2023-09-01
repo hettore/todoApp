@@ -180,27 +180,35 @@ public class TaskDialogScreen extends javax.swing.JDialog {
         // TODO add your handling code here:
         
         try {
-            Task task = new Task();
+            if(!jTextFieldName.getText().isEmpty() && !jFormattedTextFieldDeadline.getText().isEmpty()) {    
+                Task task = new Task();
             
-            task.setIdProject(project.getId());
+                task.setIdProject(project.getId());
             
-            task.setName(jTextFieldName.getText());
-            task.setDescription(jTextAreaDescription.getText());
-            task.setNotes(jTextAreaNotes.getText());
-            task.setIsCompleted(false);
+                task.setName(jTextFieldName.getText());
+                task.setDescription(jTextAreaDescription.getText());
+                task.setNotes(jTextAreaNotes.getText());
+                task.setIsCompleted(false);
             
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            Date deadline = null;
-            deadline = dateFormat.parse(jFormattedTextFieldDeadline.getText());
-            task.setDeadline(deadline);
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                Date deadline = null;
+                deadline = dateFormat.parse(jFormattedTextFieldDeadline.getText());
+                task.setDeadline(deadline);
             
-            controller.save(task);
+                controller.save(task);
             
-            JOptionPane.showConfirmDialog(rootPane, "Tarefa salva com sucesso!");
+                JOptionPane.showConfirmDialog(rootPane, "Tarefa salva com sucesso!");
+            
+                this.dispose();
+                
+            }
+            else {
+                JOptionPane.showMessageDialog(rootPane, "A tarefa não foi salva, preencha os campos obrigatórios.");
+            }
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(rootPane, e.getMessage());
         }
-        this.dispose();
+        
     }//GEN-LAST:event_jLabelToolBarSaveMouseClicked
 
     /**
