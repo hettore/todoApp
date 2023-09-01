@@ -1,8 +1,15 @@
 # todoApp
 Aplicativo feito no Bootcamp Capgemini.
 Capturas do projeto em construção.
-![image](https://github.com/hettore/todoApp/assets/24979432/638f56f8-5fe2-4b49-bd3a-135910b86352)
 
-![image](https://github.com/hettore/todoApp/assets/24979432/0b572b49-73a5-46d7-96a0-eb367dd4ec35)
+Tela inicial: <br>
+![Captura de tela 2023-09-01 100306](https://github.com/hettore/todoApp/assets/24979432/963ec212-8811-41f9-989a-99eac19eb94a)
 
-![image](https://github.com/hettore/todoApp/assets/24979432/671077ad-ca49-4a3b-8f47-52cb01cb22bc)
+Tela de cadastro de projeto: <br>
+![Captura de tela 2023-09-01 100242](https://github.com/hettore/todoApp/assets/24979432/aedc1b74-5c74-4591-b2f3-9555b72fc719)
+
+Tela de cadastro de tarefa: <br>
+![Captura de tela 2023-09-01 100150](https://github.com/hettore/todoApp/assets/24979432/18626769-6ba4-45c7-b119-766022658c08)
+
+Projeto rodando: <br>
+![Captura de tela 2023-09-01 100405](https://github.com/hettore/todoApp/assets/24979432/433a6c98-b41e-47e3-a308-b7965ed46443)
